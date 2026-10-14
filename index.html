@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <!-- v20 M-4: theme-color الابتدائي يطابق الوضع الغامق الافتراضي؛ theme-init.js (ملف خارجي)
+       يضبطه وdata-theme فورًا حسب تفضيل المستخدم المحفوظ ثم تفضيل النظام، قبل تحميل app.js،
+       لتفادي وميض شريط العنوان والخلفية في الوضع الفاتح (يُستكمل بـ syncThemeColor لاحقًا). -->
+  <meta name="theme-color" content="#0E0817">
+  <script src="theme-init.js"></script>
+  <title>راجع اعمالك</title>
+  <!-- O-1: Cairo/Tajawal are bundled in fonts/ and precached by sw.js. -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230E0817'/><g fill='%23B794F6'><rect x='32' y='48' width='9' height='18' rx='2'/><rect x='46' y='35' width='9' height='31' rx='2'/><rect x='60' y='42' width='9' height='24' rx='2'/></g><circle cx='50' cy='50' r='37' fill='none' stroke='%23B794F6' stroke-width='3'/></svg>">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="راجع اعمالك">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+  <button id="update-banner" class="update-banner hidden" type="button">إصدار جديد متوفر — انقر للتحديث</button>
+  <div id="app"></div>
+  <div id="modal-overlay" class="modal-overlay hidden"></div>
+  <div id="toast" class="toast hidden"></div>
+  <script src="system-data.js"></script>
+  <script src="app.js"></script>
+  <!-- v20 M-5: آخر سكربت سطري أُزيل — تسجيل عامل الخدمة يحدث من app.js عند تحميل الصفحة -->
+</body>
+</html>
